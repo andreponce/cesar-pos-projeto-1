@@ -2,9 +2,9 @@ package com.example.projeto1.activity
 
 import android.app.Activity
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projeto1.R
 import com.example.projeto1.databinding.ActivityFuitDetailBinding
 import com.example.projeto1.model.Fruit
 
@@ -15,11 +15,14 @@ class FruitDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
         val binding = ActivityFuitDetailBinding.inflate(layoutInflater)
+        setSupportActionBar(binding.toolbar.toolbar)
         setContentView(binding.root)
 
         val fruit = intent.getParcelableExtra<Fruit>(EXTRA)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = fruit.name
 
         binding.nameTxt.text = fruit.name;
         binding.descriptionTxt.text = fruit.description

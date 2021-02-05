@@ -1,7 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="colorAccent">@color/deepPink</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
     <style name="title_item">
@@ -36,5 +39,9 @@
         <item name="android:scrollHorizontally">false</item>
         <item name="android:inputType">text</item>
         <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="AppTheme.AlertDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/deepPink</item>
     </style>
 </resources>

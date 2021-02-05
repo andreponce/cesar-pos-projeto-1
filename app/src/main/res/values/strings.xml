@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Projeto1</string>
+    <string name="app_name">Frutas do planeta Terra</string>
+    <string name="filter">Filtrar</string>
+    <string name="ok">OK</string>
 </resources>

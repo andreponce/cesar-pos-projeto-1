@@ -12,15 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.MainActivity" android:screenOrientation="sensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FruitDetailActivity"></activity>
-        <activity android:name=".activity.AddFruitActivity"></activity>
+        <activity android:name=".activity.FruitDetailActivity" android:screenOrientation="sensor" android:parentActivityName=".activity.MainActivity"></activity>
+        <activity android:name=".activity.AddFruitActivity" android:screenOrientation="sensor" android:parentActivityName=".activity.MainActivity"></activity>
     </application>
 
 </manifest>

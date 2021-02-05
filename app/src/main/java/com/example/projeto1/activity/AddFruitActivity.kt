@@ -31,10 +31,12 @@ class AddFruitActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
         binding = ActivityAddFruitBinding.inflate(layoutInflater)
-
+        setSupportActionBar(binding.toolbar.toolbar)
         setContentView(binding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Adicionar Fruta"
 
         binding.selectBt.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
